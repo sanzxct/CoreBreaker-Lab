@@ -1,0 +1,13 @@
+cat <<EOF > .gitignore
+# Binaries and Objects
+bin/
+*.o
+*.out
+
+# macOS system files
+.DS_Store
+
+# IDE - VS Code
+.vscode/
+*.swp
+EOF

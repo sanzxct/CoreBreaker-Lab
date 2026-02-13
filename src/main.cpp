@@ -27,8 +27,6 @@ int main()
     }
     memset(host_mem, 0, mem_size);
 
-    // 3. Mapping Memori ke Guest (GPA)
-    // Kita petakan RAM host ke alamat 0x4000 di dalam VM
     uint64_t guest_addr = 0x4000;
     hv_return_t map_status = hv_vm_map(host_mem, guest_addr, mem_size, 
                                       HV_MEMORY_READ | HV_MEMORY_WRITE | HV_MEMORY_EXEC);
